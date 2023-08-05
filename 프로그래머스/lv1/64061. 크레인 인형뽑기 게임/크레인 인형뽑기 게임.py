@@ -6,6 +6,9 @@ def solution(board, moves):
             chk=board[j][i-1]
             board[j][i-1]=0
             if chk!=0:
+                if len(stack)==0:
+                    stack.append(chk)
+                    break
                 if len(stack)>0:
                     if stack[-1]==chk:
                         stack.pop()
@@ -14,7 +17,4 @@ def solution(board, moves):
                     else:
                         stack.append(chk)
                         break
-                else:
-                    stack.append(chk)
-                    break
     return cnt
