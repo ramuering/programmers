@@ -25,8 +25,4 @@ for i in range(n):
         tmp = i
 print(result)
 for i in range(len(ans[tmp])):
-    if i == len(ans[tmp])-1:
-        print(ans[tmp][i])
-    else:
-        print(ans[tmp][i], end=' ')
-
+    print(ans[tmp][i], end=' ')
